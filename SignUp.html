@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Sign Up</title>
+    <!--Add fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
@@ -17,42 +18,54 @@
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
       })(document);
     </script>
-    <link href="normalize.css" rel="normalize" type="text/css" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="password_validation.js" rel="password validation javascript" type="text/js"/>
+    <!--Add CSS & JS Files-->
+    <link href="css_files/normalize.css" rel="normalize" type="text/css" />
+    <link href="css_files/style.css" rel="stylesheet" type="text/css" />
+    <link href="javascript_files/password_validation.js" rel="password validation javascript" type="text/js"/>
   </head>
 
   <body>
+    <!--Navigation Bar-->
     <header>
       <div class="header">
         <div class="logo">
-          <img src="Media\kitani_logo.png" alt="logo" width=15%>
+          <img src="images/kitani_logo.png" alt="logo" width=15%>
         </div>
-        <a href="Home.html#home-anchor">Home</a>
-        <a href="Home.html#updates-anchor">Updates</a>
-        <a href="Home.html#bio-anchor">Bio</a>
-        <a href="Home.html#music-anchor">Music</a>
-        <a href="Home.html#goods-anchor">Goods</a>
+        <a href="index.html#home-anchor">Home</a>
+        <a href="index.html#updates-anchor">Updates</a>
+        <a href="index.html#bio-anchor">Bio</a>
+        <a href="index.html#music-anchor">Music</a>
+        <a href="index.html#goods-anchor">Goods</a>
       </div>
     </header>
 
     <h1 ID="Sign-up-page-title">Sign Up</h1>
     <Section class="container">
         <form action="/action_page.php" id="myFrm">
+          <!--Enter Email-->
             <label for="email">Email</label>
             <p></p>
             <input type="email" id="email" name="email" required>
 
+            <!--Enter Username-->
             <p><label for="usrname">Username</label></p>
             <p> </p>
             <input type="text" id="usrname" name="usrname" required>
-      
+
+            <!--Enter password-->
             <p><label for="psw">Password</label></p>
             <p> </p>
         <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
       
+            <!--submit button-->
             <p><input type="submit" value="Submit"></p>
 
+            <!--divert to Login.html-->
+            <p>Already have an account?
+              <a href="Login.html"> Login</a>
+            </p>
+
+            <!-- localStorage check
             <table id="user-table">
               <thead>
                 <th>Email</th>
@@ -61,30 +74,39 @@
               </thead>
               <tbody id="user-table-body"></tbody>
             </table>
+          -->
 
           <script>
             refreshUserTable();
 
+            //retrieve form information when submit
             document.addEventListener("submit", function (event) {
+              //prevent default action of the form from actually submitting
               event.preventDefault();
+
+              //get form values
               let userEmail = document.getElementById("email").value;
               let userName = document.getElementById("usrname").value;
               let userPsw = document.getElementById("psw").value;
 
               let userList = [];
 
+              //retrieve localstorage items
               if (localStorage.getItem("userList") !== null) {
                 userList = JSON.parse(localStorage.getItem("userList"));
               }
               let newUser = new User(userEmail, userName, userPsw);
+              //create our user and store to localstorage
               userList.push(newUser);
               localStorage.setItem("userList",JSON.stringify(userList));
 
+              //clear the form upon each submission
               document.getElementById("myFrm").reset();
 
               refreshUserTable();
             });
 
+            //created function based object "template"
             function User(userEmail, userName, userPsw) {
               this.id = Date.now();
               this.email = userEmail;
@@ -92,6 +114,7 @@
               this.password = userPsw;
             }
 
+            //method to print the list of users from localstorage to output on the html page.
             function refreshUserTable() {
               let userTable = document.getElementById("user-table-body");
               let userList = [];

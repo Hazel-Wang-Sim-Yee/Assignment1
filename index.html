@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Home</title>
+    <!--Add fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
@@ -17,16 +18,17 @@
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
       })(document);
     </script>
-    <link href="normalize.css" rel="normalize" type="text/css" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="home_javascript.js" rel="home page javascript" type="text/js"/>
+    <!--Add CSS Files-->
+    <link href="css_files/normalize.css" rel="normalize" type="text/css" />
+    <link href="css_files/style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
+    <!--Navigation Bar-->
     <header>
       <div class="header">
         <div class="logo">
-          <img src="Media\kitani_logo.png" alt="logo" width=15%>
+          <img src="images/kitani_logo.png" alt="logo" width=15%>
         </div>
         <a href="#home-anchor">Home</a>
         <a href="#updates-anchor">Updates</a>
@@ -36,27 +38,34 @@
       </div>
     </header>
 
+    <!--Home Section-->
     <div class="home">
       <a id="home-anchor"></a>
+      <!--Add Home Page Vid-->
       <video control autoplay loop muted>
-         <source src="Media\TK_homepagevid.mp4" type="video/mp4">
+         <source src="images/TK_homepagevid.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
     
+    <!--Updates Section-->
     <a id="updates-anchor"></a>
     <h1>UPDATES</h1>
     <Section class="Container">
+      <!--Add Update Picture-->
       <div class="Updates">
-          <img src="Media\ANGEL-WHISPERING-1280x720.jpg" width=100% title="
+          <img src="images/ANGEL-WHISPERING-1280x720.jpg" width=100% title="
           Arena Tour 2025 tickets now available!">
       </div>
+      <!--Update Info-->
       <div class="Updates">
+        <!--Update toggle buttons-->
         <div class="update-buttons">
-          <button id="news-button">News</button>
-          <button id="live-button">Live</button>
+          <button id="news-button" onclick="newsFunction()">News</button>
+          <button id="live-button" onclick="livesFunction()">Live</button>
         </div>
-        <div id="news" onclick="newsFunction()">
+        <!--News Thumbnail-->
+        <div id="news">
           <a class="update-button" href="News1.html">
             <p><nobr class="NEW">NEW</nobr><nobr> 2024.11.27</nobr></p>
             <p>GEMN「THE FIRST TAKE」Appearance --></p>
@@ -78,7 +87,8 @@
             <p>2024 FNS Song Festival 2nd Night GEMN Appearance --></p>
           </a>
         </div>
-        <div id="lives" onclick="livesFunction()">
+        <!--live thumbnails-->
+        <div id="lives">
           <a class="update-button" href="Live1.html">
             <p>2024.12.7</p>
             <p>“LIVE IN CLUB UNREALITY Vol.3” Kyoto --></p>
@@ -103,65 +113,76 @@
       </div>
     </Section>
     
+    <!--Bio Section-->
     <a id="bio-anchor"></a>
     <h1>BIO</h1>
     <Section class="Container">
+      <!--Bio image-->
       <div class="Bio">
-        <img src="Media\TatsuyaKitani_Asha_S-1170x774.jpg" width=100% title="Tatsuya Kitani">
+        <img src="images/TatsuyaKitani_Asha_S-1170x774.jpg" width=100% title="Tatsuya Kitani">
       </div>
+      <!--Bio info-->
       <div class="Bio">
         <h2>TATSUYA KITANI</h2>
-        <p><img src="Media\kitani_logo_small.png" width=15%></p>
+        <p><img src="images/kitani_logo_small.png" width=15%></p>
         <p>He started releasing songs online around 2014 and started his activities as Vocaloid P "Hello Tanida-san".
           Since 2017, his high musical taste has been admired, and he has been providing music as a writer while also performing as a solo artist.
           In addition to being a singer-songwriter, he also engages in activities that transcend genres, such as supporting bass and providing music.</p>
       </div>
     </Section>
 
+    <!--Music Section-->
     <a id="music-anchor"></a>
     <section class="Container">
       <div class="Music">
+        <!--navigate to Disco.html button-->
         <button class="disco-button" onclick="location.href='Disco.html'">
-          <image src="Media/whisper_jkt_rgb-1-660x660.jpg" width=70%></image>
+          <image src="images/whisper_jkt_rgb-1-660x660.jpg" width=70%></image>
           <h1 class="disco-button-title">Disco</h1>
         </button>
+        <!--navigate to Movie.html button-->
         <button class="movie-button" onclick="location.href='Movie.html'">
-          <image src="Media/chained_thumbnail_square.png" width=70%></image>
+          <image src="images/chained_thumbnail_square.png" width=70%></image>
           <h1 class="movie-button-title">Movie</h1>
         </button>
+        <!--navigate to works playlist button-->
         <button class="works-button" href="https://music.apple.com/jp/playlist/works-キタニタツヤ/pl.1203921b7d674d5e97029e250d8142d2">
-          <image src="Media/305x305cc.jpg" width=70%></image>
+          <image src="images/305x305cc.jpg" width=70%></image>
           <h1 class="works-button-title">Works</h1>
         </button>
       </div>
     </section>
 
+    <!--Goods Section-->
     <a id="goods-anchor"></a>
     <section class="Container">
       <div class="Goods">
         <h1>Goods</h1>
+        <!--link to online shop-->
         <a href="https://shop.tatsuyakitani.jp/en">Click here to go to online store -></a>
+        <!--Examples of items sold in online shop-->
         <div class="goods-display">
           <div class="item">
-            <img src="Media/604d786c49e11795e4f35ffdac3c72d6-410x410.jpg" width="100%">
+            <img src="images/604d786c49e11795e4f35ffdac3c72d6-410x410.jpg" width="100%">
             <p>Tatsuya Kitani Shopper ¥300 (tax included)</p>
           </div>
           <div class="item">
-            <img src="Media/fab78e749782a3f4569bc2c9e9873ba1-410x410.jpg" width=100%>
+            <img src="images/fab78e749782a3f4569bc2c9e9873ba1-410x410.jpg" width=100%>
             <p>【Reprint Edition】How the Devil Dances Tote Bag ¥3,000 (tax included)</p>
           </div>
           <div class="item">
-            <img src="Media/a6bdfcf57cfac0830349a9ede95996d9-410x410.jpg" width=100%>
+            <img src="images/a6bdfcf57cfac0830349a9ede95996d9-410x410.jpg" width=100%>
             <p>【Reprint Edition】How the Devil Dances T-shirt ¥4,500 (tax included)</p>
           </div>
           <div class="item">
-            <img src="Media/4f1137cf08be5715ff79815a92732012-410x410.jpg" width=100%>
+            <img src="images/4f1137cf08be5715ff79815a92732012-410x410.jpg" width=100%>
             <p>Stress relief rug "Bakuto" ¥6,000 (tax included)</p>
           </div>
           <div class="item">
-            <img src="Media/a0862effa1db5f25c1488ca2e07181d4-410x410.jpg" width=100%>
+            <img src="images/a0862effa1db5f25c1488ca2e07181d4-410x410.jpg" width=100%>
             <p>Kitani Tatsuya belt ¥2,500 (tax included)</p>
           </div>
+          <!--another link that diverts to online shop-->
           <div class="item">
           <a href="https://shop.tatsuyakitani.jp/en">And More -></a>
           </div>
@@ -169,27 +190,33 @@
       </div>
     </section>
     
+    <!--Contacts Section-->
     <section class="Container">
       <div class="Contact">
         <h1>Contact</h1>
         <p class="Contact">Artist inquiries</p>
+        <!--Email link-->
         <a href="mailto:info@tatsuyakitani.com" class="Contact">info@tatsuyakitani.com</a>
         <p class="Contact">Inquiries regarding fan club CLUB UNREALITY</p>
+        <!--Email link-->
         <a href="mailto:clubunreality@ml-stone.com" class="Contact">clubunreality@ml-stone.com</a>
       </div>
     </section>
 
+    <!--Membership Section-->
     <section class="Container">
       <div class="membership">
         <p>TATSUYA KITANI OFFICIAL FAN CLUB</p>
         <h1>CLUB UNREALITY</h1>
       </div>
+      <!--Diverting buttons to SignUp.html & Login.html-->
       <div class="membership">
         <button class="sign-up-button" onclick="location.href='SignUp.html'">Sign Up</button>
         <button class="login-button" onclick="location.href='Login.html'">Login</button>
       </div>
     </section>
-
+    
+    <!--Javascript for news and live information toggling-->
     <script>
       function newsFunction() {
         document.getElementById("news").style.display = "block";
@@ -206,10 +233,4 @@
       }
     </script>
   </body>
-
-  <footer>
-    <div class="footer">
-      
-    </div>
-  </footer>
 </html>

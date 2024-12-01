@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Disco</title>
+    <!--Add fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
@@ -17,41 +18,46 @@
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
       })(document);
     </script>
-    <link href="normalize.css" rel="normalize" type="text/css" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!--Add CSS Files-->
+    <link href="css_files/normalize.css" rel="normalize" type="text/css" />
+    <link href="css_files/style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
+    <!--Navigation Bar-->
     <header>
       <div class="header">
         <div class="logo">
-          <img src="Media\kitani_logo.png" alt="logo" width=15%>
+          <img src="images/kitani_logo.png" alt="logo" width=15%>
         </div>
-        <a href="Home.html#home-anchor">Home</a>
-        <a href="Home.html#updates-anchor">Updates</a>
-        <a href="Home.html#bio-anchor">Bio</a>
-        <a href="Home.html#music-anchor">Music</a>
-        <a href="Home.html#goods-anchor">Goods</a>
+        <a href="index.html#home-anchor">Home</a>
+        <a href="index.html#updates-anchor">Updates</a>
+        <a href="index.html#bio-anchor">Bio</a>
+        <a href="index.html#music-anchor">Music</a>
+        <a href="index.html#goods-anchor">Goods</a>
       </div>
     </header>
 
     <h1 ID="disco-page-title">DISCO</h1>
     <Section class="Container">
+      <!-- Displays the different songs
+       when hover over songs, buttons to redirect user to the song website will appear
+       songs with online lyrics are linked to the respective site-->
         <div class="songs">
-            <image src="Media/whisper_jkt_rgb-1-660x660.jpg" width=75% alt="Whisper" class="song-cover"></image>
+            <image src="images/whisper_jkt_rgb-1-660x660.jpg" width=75% alt="Whisper" class="song-cover"></image>
             <div class="apple-music">
               <a href="https://music.apple.com/us/album/ウィスパー-single/1780914994">
-                <img src="Media/apple_music_logo.png" width=17% alt="Apple Music">
+                <img src="images/apple_music_logo.png" width=17% alt="Apple Music">
               </a>
             </div>
             <div class="spotify">
               <a href="https://open.spotify.com/album/4cdpSmfFF2bkD4BlS8V7k6?go=1&nd=1&dlsi=7bd5da99bacb433e">
-                <img src="Media/spotify_logo.png" width="17%" alt="Spotify">
+                <img src="images/spotify_logo.png" width="17%" alt="Spotify">
               </a>
             </div>
             <div class="line-music">
               <a href="https://music.line.me/webapp/album/mb0000000004013f2d">
-                <img src="Media/line_music_logo.png" width=17% alt="Line Music">
+                <img src="images/line_music_logo.png" width=17% alt="Line Music">
               </a>
             </div>
             <div class="song-info">
@@ -63,20 +69,20 @@
         </div>
 
         <div class="songs">
-            <image src="Media/haishin_jkt_fix_rgn-660x660.jpg" width=75% alt="Chained" class="song-cover"></image>
+            <image src="images/haishin_jkt_fix_rgn-660x660.jpg" width=75% alt="Chained" class="song-cover"></image>
             <div class="apple-music">
               <a href="https://music.apple.com/jp/album/いらないもの-ep/1777007804">
-                <img src="Media/apple_music_logo.png" width=17% alt="Apple Music">
+                <img src="images/apple_music_logo.png" width=17% alt="Apple Music">
               </a>
             </div>
             <div class="spotify">
               <a href="https://open.spotify.com/album/3AFWkTfMAKf5T3rK32Wqhm?go=1&nd=1&dlsi=1b5030448bf04be9">
-                <img src="Media/spotify_logo.png" width="17%" alt="Spotify">
+                <img src="images/spotify_logo.png" width="17%" alt="Spotify">
               </a>
             </div>
             <div class="line-music">
               <a href="https://music.line.me/webapp/album/mb0000000003f74370">
-                <img src="Media/line_music_logo.png" width=17% alt="Line Music">
+                <img src="images/line_music_logo.png" width=17% alt="Line Music">
               </a>
             </div>
             <div class="song-info">
@@ -97,20 +103,20 @@
         </div>
 
         <div class="songs">
-          <image src="Media/GEMN_Fatal_haishin_H1_RGB-660x660.jpg" width=75% alt="Fatal" class="song-cover"></image>
+          <image src="images/GEMN_Fatal_haishin_H1_RGB-660x660.jpg" width=75% alt="Fatal" class="song-cover"></image>
           <div class="apple-music">
             <a href="https://music.apple.com/us/album/ファタール-fatal-single/1754483688">
-              <img src="Media/apple_music_logo.png" width=17% alt="Apple Music">
+              <img src="images/apple_music_logo.png" width=17% alt="Apple Music">
             </a>
           </div>
           <div class="spotify">
             <a href="https://open.spotify.com/album/6OBk036VgLGkxpggcFPqJL?go=1&nd=1&dlsi=f7853f3dda414b1c">
-              <img src="Media/spotify_logo.png" width="17%" alt="Spotify">
+              <img src="images/spotify_logo.png" width="17%" alt="Spotify">
             </a>
           </div>
           <div class="line-music">
             <a href="https://music.line.me/webapp/album/mb0000000003b754dc">
-              <img src="Media/line_music_logo.png" width=17% alt="Line Music">
+              <img src="images/line_music_logo.png" width=17% alt="Line Music">
             </a>
           </div>
           <div class="song-info">
@@ -122,20 +128,20 @@
         </div>
 
         <div class="songs">
-            <image src="Media/49b67669fa8793051d409330aa2990af-660x660.jpg" width="75%" alt="Always Be With You XD" class="song-cover"></image>
+            <image src="images/49b67669fa8793051d409330aa2990af-660x660.jpg" width="75%" alt="Always Be With You XD" class="song-cover"></image>
             <div class="apple-music">
               <a href="https://music.apple.com/jp/album/ずうっといっしょ/1745063744?i=1745063747">
-                <img src="Media/apple_music_logo.png" width=17% alt="Apple Music">
+                <img src="images/apple_music_logo.png" width=17% alt="Apple Music">
               </a>
             </div>
             <div class="spotify">
               <a href="https://open.spotify.com/album/0WcvYEwpmtLdlNsRNVeLU4">
-                <img src="Media/spotify_logo.png" width="17%" alt="Spotify">
+                <img src="images/spotify_logo.png" width="17%" alt="Spotify">
               </a>
             </div>
             <div class="line-music">
               <a href="https://music.line.me/webapp/album/mb00000000039cefe4">
-                <img src="Media/line_music_logo.png" width=17% alt="Line Music">
+                <img src="images/line_music_logo.png" width=17% alt="Line Music">
               </a>
             </div>
             <div class="song-info">

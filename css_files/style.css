@@ -1,3 +1,4 @@
+/*style throughout the website*/
 body {
     background-color: black;
     color: whitesmoke;
@@ -17,6 +18,7 @@ p {
     font-style: normal;
 }
 
+/*navigation bar styling*/
 .header {
     position: fixed;
     display: flex;
@@ -36,7 +38,7 @@ p {
     display:flex;
     justify-content: center;
 }
-
+ /*the main flex box that contains all content for the section*/
 .Container {
     display: flex;
     max-width: 100%;
@@ -45,7 +47,7 @@ p {
     height: auto;
 }
 
-
+/*udates section styling*/
 .Updates {
     padding: 2%;
     flex-basis: 45%;
@@ -100,7 +102,7 @@ button#live-button {
     width: 250%;
     color: whitesmoke;
 }
-
+ /*styling for news and live information sites*/
 .NEW {
     color:rgb(229, 79, 79);
 }
@@ -126,6 +128,7 @@ button.more {
     border: 2px solid whitesmoke;
 }
 
+/*bio section styling*/
 .Bio {
     padding: 2%;
     flex-basis: 45%;
@@ -144,6 +147,7 @@ button.more {
     }
 }
 
+/*music section styling*/
 .Music {
     padding: 2%;
     flex-basis: 45%;
@@ -194,6 +198,7 @@ a {
     padding-inline: 3%;
 }
 
+/*goods section styling*/
 .Goods {
     width: 100%;
 }
@@ -213,7 +218,7 @@ a {
     padding: 2%;
 }
 
-
+/*styling for the remaining parts of main page*/
 p.Contact, a.Contact {
     font-weight: 900;
     font-size: 200%;
@@ -247,6 +252,7 @@ button.login-button {
     color:rgb(229, 79, 79);
 }
 
+/*styling for disco page*/
 .songs {
     display: flex;
     align-items: flex-start;
@@ -322,7 +328,7 @@ label {
 h3 {
     font-size: 200%;
 }
-
+ /*styling for movie page*/
 iframe {
     object-fit: contain;
     position: absolute;
