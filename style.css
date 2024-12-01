@@ -1,0 +1,393 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 300%;    
+}
+
+p {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    background-color: black;
+    color: whitesmoke;
+    z-index: 1;
+}
+
+.logo {
+    width: 100%;
+    justify-content: start;
+}
+
+.home {
+    display:flex;
+    justify-content: center;
+}
+
+.Container {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex: 1 0 100%;
+    height: auto;
+}
+
+
+.Updates {
+    padding: 2%;
+    flex-basis: 45%;
+    align-items: flex-start;
+    display: flex;
+    border: 1px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+@media (max-width: 920px) {
+    .Updates {
+        flex-grow: 1;
+        flex-basis: 45%;
+        padding: 2%;
+    }
+}
+
+button {
+background: transparent;
+border: none !important;
+color: white;
+flex-direction: row;
+width: auto;
+font-size: 1.5em;
+padding-inline: 3%;
+}
+
+.update-buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 18px;
+    padding-inline: 10%;
+    margin-left: 5%;
+    border:1px solid rgb(229, 79, 79);
+    border-radius: 20%;
+    width: 50%
+}
+
+.update-button {
+    border-bottom: 1% solid rgb(229, 79, 79);
+}
+
+button#news-button {
+    margin-right: 25%;
+    color:rgb(229, 79, 79)
+}
+
+button#live-button {
+    width: 250%;
+    color: whitesmoke;
+}
+
+.NEW {
+    color:rgb(229, 79, 79);
+}
+
+button.more {
+    border: 1px solid rgb(229, 79, 79);
+}
+
+#news {
+    display: block;
+}
+
+#lives {
+    display: none;
+}
+
+.news-title, .lives-title {
+    padding-top: 10%;
+}
+
+.ticket-link {
+    padding: 2%;
+    border: 2px solid whitesmoke;
+}
+
+.Bio {
+    padding: 2%;
+    flex-basis: 45%;
+    align-items: flex-start;
+    display: flex;
+    border: 1px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 920px) {
+    .Bio {
+        flex-grow: 1;
+        flex-basis: 45%;
+        padding: 2%;
+    }
+}
+
+.Music {
+    padding: 2%;
+    flex-basis: 45%;
+    display: flex;
+    align-items: flex-start;
+    border: 1px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movie-button {
+    align-self: flex-end;
+    width: 490px;
+    height: 450px;
+}
+
+.disco-button, .works-button {
+    align-self: center;
+    position: relative;
+    width: 490px;
+    height: 450px;
+}
+
+.disco-button-title, .works-button-title {
+    position: relative;
+    left: 110px;
+    bottom: 120px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.movie-button-title {
+    position: relative;
+    right: 110px;
+    bottom: 120px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+a {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: whitesmoke;
+    background: transparent;
+    border: none !important;
+    flex-direction: row;
+    font-size: 1.5em;
+    padding-inline: 3%;
+}
+
+.Goods {
+    width: 100%;
+}
+
+.goods-display {
+    position:relative;
+    margin: auto;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+}
+
+.item {
+    display:flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 2%;
+}
+
+
+p.Contact, a.Contact {
+    font-weight: 900;
+    font-size: 200%;
+}
+
+.membership {
+    border-top: 2px solid rgb(229, 79, 79);
+    flex-grow: 1;
+}
+
+button.sign-up-button {
+    margin-top: 10%;
+    margin-right: 5%;
+    width: 43%;
+    height: 25%;
+    background-color: red;
+    flex-direction: row;
+}
+
+button.login-button {
+    margin-left: 5%;
+    width: 43%;
+    height: 25%;
+    background-color: grey;
+    flex-direction: row;
+}
+
+#disco-page-title, #Sign-up-page-title, #Login-page-title, #movie-page-title {
+    padding-top: 10%;
+    opacity: 50%;
+    color:rgb(229, 79, 79);
+}
+
+.songs {
+    display: flex;
+    align-items: flex-start;
+    width: 420px;
+    padding: 2%;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 500px;
+}
+
+.song-cover {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    position: relative;
+}
+
+.apple-music {
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    bottom: 150px;
+    left: 250px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.spotify {
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    bottom: 227px;
+    left: 333px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.line-music {
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    bottom: 305px;
+    left: 415px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.songs:hover .song-cover {
+    opacity:0.3;
+}
+
+.songs:hover .apple-music, .songs:hover .spotify, .songs:hover .line-music {
+    opacity: 1;
+}
+
+.song-info {
+    position: relative;
+    bottom: 233px;
+}
+
+a.lyrics {
+    color:rgb(229, 79, 79);
+    font-weight: 600;
+}
+
+label {
+    font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h3 {
+    font-size: 200%;
+}
+
+iframe {
+    object-fit: contain;
+    position: absolute;
+}
+
+.MV {
+    flex-direction: column;
+    padding: 2%;
+    flex-grow: 2;
+    max-width: 1000px;
+    height: 500px;
+    flex-basis: 100%;
+    padding-bottom: 2%;
+    position: relative;
+}
+
+.other-MVs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    flex-grow: 1;
+}
+
+#Chained-MV, #Fatal-MV, #ABWY-MV, #POM-MV {
+    width: 24%
+}
+
+.MV-thumbnail {
+    padding: 2%;
+    width: 100%;
+}
+
+.Chained {
+    display:block;
+}
+
+#Chained-Mv {
+    opacity: 100%;
+}
+
+.Fatal {
+    display: none;
+}
+
+#Fatal-MV {
+    opacity: 50%;
+}
+
+#Fatal-Movie, #Fatal-info {
+    display: none;
+}
+
+.ABWY {
+    display: none;
+}
+
+#ABWY-MV {
+    opacity: 50%;
+}
+
+.POM {
+    display: none;
+}
+
+#POM-MV {
+    opacity: 50%;
+}

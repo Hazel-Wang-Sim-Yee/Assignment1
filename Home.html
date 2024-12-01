@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'yqq6nrq',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+    <link href="normalize.css" rel="normalize" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="home_javascript.js" rel="home page javascript" type="text/js"/>
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <div class="logo">
+          <img src="Media\kitani_logo.png" alt="logo" width=15%>
+        </div>
+        <a href="#home-anchor">Home</a>
+        <a href="#updates-anchor">Updates</a>
+        <a href="#bio-anchor">Bio</a>
+        <a href="#music-anchor">Music</a>
+        <a href="#goods-anchor">Goods</a>
+      </div>
+    </header>
+
+    <div class="home">
+      <a id="home-anchor"></a>
+      <video control autoplay loop muted>
+         <source src="Media\TK_homepagevid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <a id="updates-anchor"></a>
+    <h1>UPDATES</h1>
+    <Section class="Container">
+      <div class="Updates">
+          <img src="Media\ANGEL-WHISPERING-1280x720.jpg" width=100% title="
+          Arena Tour 2025 tickets now available!">
+      </div>
+      <div class="Updates">
+        <div class="update-buttons">
+          <button id="news-button">News</button>
+          <button id="live-button">Live</button>
+        </div>
+        <div id="news" onclick="newsFunction()">
+          <a class="update-button" href="News1.html">
+            <p><nobr class="NEW">NEW</nobr><nobr> 2024.11.27</nobr></p>
+            <p>GEMN「THE FIRST TAKE」Appearance --></p>
+          </a>
+          <a class="update-button" href="News2.html">
+            <p><nobr class="NEW">NEW</nobr><nobr> 2024.11.26</nobr></p>
+            <p>『All Night Nippon X (Cross)』Special Live Appearance Decided --></p>    
+          </a>
+          <a class="update-button" href="News3.html">
+            <p>2024.11.22</p>
+            <p>「Whisper」Released --></p>
+          </a>
+          <a class="update-button" href="News4.html">
+            <p>2024.11.14</p>
+            <p>Tour “ROUNDABOUT” Live Report Posted --></p>
+          </a>
+          <a class="update-button" href="News5.html">
+            <p>2024.11.13</p>
+            <p>2024 FNS Song Festival 2nd Night GEMN Appearance --></p>
+          </a>
+        </div>
+        <div id="lives" onclick="livesFunction()">
+          <a class="update-button" href="Live1.html">
+            <p>2024.12.7</p>
+            <p>“LIVE IN CLUB UNREALITY Vol.3” Kyoto --></p>
+          </a>
+          <a class="update-button" href="Live2.html">
+            <p>2025.1.26</p>
+            <p>FUKUOKA MUSIC FES.2025 --></p>
+          </a>
+          <a class="update-button" href="Live3.html">
+            <p><nobr class="NEW">NEW</nobr><nobr> 2025.2.11</nobr></p>
+            <p>Nippon Broadcasting 70th Anniversary All Night Nippon X (Cross) Special Live 2025 --></p>
+          </a>
+          <a class="update-button" href="Live4.html">
+            <p>2025.3.15</p>
+            <p>Tatsuya Kitani Arena Tour 2025 Tokyo Ariake Arena --></p>
+          </a>
+          <a class="update-button" href="Live5.html">
+            <p>2025.3.16</p>
+            <p>Tatsuya Kitani Arena Tour 2025 Tokyo Ariake Arena --></p>
+          </a>
+        </div>
+      </div>
+    </Section>
+    
+    <a id="bio-anchor"></a>
+    <h1>BIO</h1>
+    <Section class="Container">
+      <div class="Bio">
+        <img src="Media\TatsuyaKitani_Asha_S-1170x774.jpg" width=100% title="Tatsuya Kitani">
+      </div>
+      <div class="Bio">
+        <h2>TATSUYA KITANI</h2>
+        <p><img src="Media\kitani_logo_small.png" width=15%></p>
+        <p>He started releasing songs online around 2014 and started his activities as Vocaloid P "Hello Tanida-san".
+          Since 2017, his high musical taste has been admired, and he has been providing music as a writer while also performing as a solo artist.
+          In addition to being a singer-songwriter, he also engages in activities that transcend genres, such as supporting bass and providing music.</p>
+      </div>
+    </Section>
+
+    <a id="music-anchor"></a>
+    <section class="Container">
+      <div class="Music">
+        <button class="disco-button" onclick="location.href='Disco.html'">
+          <image src="Media/whisper_jkt_rgb-1-660x660.jpg" width=70%></image>
+          <h1 class="disco-button-title">Disco</h1>
+        </button>
+        <button class="movie-button" onclick="location.href='Movie.html'">
+          <image src="Media/chained_thumbnail_square.png" width=70%></image>
+          <h1 class="movie-button-title">Movie</h1>
+        </button>
+        <button class="works-button" href="https://music.apple.com/jp/playlist/works-キタニタツヤ/pl.1203921b7d674d5e97029e250d8142d2">
+          <image src="Media/305x305cc.jpg" width=70%></image>
+          <h1 class="works-button-title">Works</h1>
+        </button>
+      </div>
+    </section>
+
+    <a id="goods-anchor"></a>
+    <section class="Container">
+      <div class="Goods">
+        <h1>Goods</h1>
+        <a href="https://shop.tatsuyakitani.jp/en">Click here to go to online store -></a>
+        <div class="goods-display">
+          <div class="item">
+            <img src="Media/604d786c49e11795e4f35ffdac3c72d6-410x410.jpg" width="100%">
+            <p>Tatsuya Kitani Shopper ¥300 (tax included)</p>
+          </div>
+          <div class="item">
+            <img src="Media/fab78e749782a3f4569bc2c9e9873ba1-410x410.jpg" width=100%>
+            <p>【Reprint Edition】How the Devil Dances Tote Bag ¥3,000 (tax included)</p>
+          </div>
+          <div class="item">
+            <img src="Media/a6bdfcf57cfac0830349a9ede95996d9-410x410.jpg" width=100%>
+            <p>【Reprint Edition】How the Devil Dances T-shirt ¥4,500 (tax included)</p>
+          </div>
+          <div class="item">
+            <img src="Media/4f1137cf08be5715ff79815a92732012-410x410.jpg" width=100%>
+            <p>Stress relief rug "Bakuto" ¥6,000 (tax included)</p>
+          </div>
+          <div class="item">
+            <img src="Media/a0862effa1db5f25c1488ca2e07181d4-410x410.jpg" width=100%>
+            <p>Kitani Tatsuya belt ¥2,500 (tax included)</p>
+          </div>
+          <div class="item">
+          <a href="https://shop.tatsuyakitani.jp/en">And More -></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="Container">
+      <div class="Contact">
+        <h1>Contact</h1>
+        <p class="Contact">Artist inquiries</p>
+        <a href="mailto:info@tatsuyakitani.com" class="Contact">info@tatsuyakitani.com</a>
+        <p class="Contact">Inquiries regarding fan club CLUB UNREALITY</p>
+        <a href="mailto:clubunreality@ml-stone.com" class="Contact">clubunreality@ml-stone.com</a>
+      </div>
+    </section>
+
+    <section class="Container">
+      <div class="membership">
+        <p>TATSUYA KITANI OFFICIAL FAN CLUB</p>
+        <h1>CLUB UNREALITY</h1>
+      </div>
+      <div class="membership">
+        <button class="sign-up-button" onclick="location.href='SignUp.html'">Sign Up</button>
+        <button class="login-button" onclick="location.href='Login.html'">Login</button>
+      </div>
+    </section>
+
+    <script>
+      function newsFunction() {
+        document.getElementById("news").style.display = "block";
+        document.getElementById("lives").style.display = "none";
+        document.getElementById("news-button").style.color = "rgb(229, 79, 79)";
+        document.getElementById("live-button").style.color = "whitesmoke";
+      }
+
+      function livesFunction() {
+        document.getElementById("news").style.display = "none";
+        document.getElementById("lives").style.display = "block";
+        document.getElementById("news-button").style.color = "whitesmoke";
+        document.getElementById("live-button").style.color = "rgb(229, 79, 79)";
+      }
+    </script>
+  </body>
+
+  <footer>
+    <div class="footer">
+      
+    </div>
+  </footer>
+</html>

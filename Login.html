@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'yqq6nrq',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+    <link href="normalize.css" rel="normalize" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <div class="logo">
+          <img src="Media\kitani_logo.png" alt="logo" width=15%>
+        </div>
+        <a href="Home.html#home-anchor">Home</a>
+        <a href="Home.html#updates-anchor">Updates</a>
+        <a href="Home.html#bio-anchor">Bio</a>
+        <a href="Home.html#music-anchor">Music</a>
+        <a href="Home.html#goods-anchor">Goods</a>
+      </div>
+    </header>
+
+    <h1 ID="Login-page-title">Login</h1>
+    <Section class="container">
+        <form action="/action_page.php" id="myFrm">
+            <label for="email or username">Email or Username</label>
+            <p></p>
+            <input type="txt" id="email-or-username" name="email or username" required>
+      
+            <p><label for="psw">Password</label></p>
+            <p> </p>
+        <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must match with previously set password of the username or email." required>
+      
+            <p><input type="submit" value="Submit"></p>
+
+            <table id="user-table">
+              <thead>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+              </thead>
+              <tbody id="user-table-body"></tbody>
+            </table>
+
+          <script>
+            refreshUserTable();
+
+            document.addEventListener("submit", function (event) {
+              event.preventDefault();
+              let userEmailoruserName = document.getElementById("email-or-username").value;
+              let userPsw = document.getElementById("psw").value;
+
+              let userList = [];
+
+              if (localStorage.getItem("userList") !== null) {
+                userList = JSON.parse(localStorage.getItem("userList"));
+              }
+              let signIn = "unsuccessful";
+              for(let i=0; i < userList.length; i++) {
+                if ((userEmailoruserName === userList[i][0] || userEmailoruserName === userList[i][1]) && userPsw === userList[i][2]) ;{
+                  window.alert("You have successfully signed in.");
+                  signIn = "successful";
+                  break;
+                }
+              }
+
+              if (signIn !== "successful") {
+                  window.alert("Your Username or Password may have been inputed incorrectly. Please Try Again.")
+                }
+
+              document.getElementById("myFrm").reset();
+
+              refreshUserTable();
+            });
+
+            function User(userEmail, userName, userPsw) {
+              this.id = Date.now();
+              this.email = userEmail;
+              this.name = userName;
+              this.password = userPsw;
+            }
+
+            function refreshUserTable() {
+              let userTable = document.getElementById("user-table-body");
+              let userList = [];
+              let userData = "";
+              if (localStorage.getItem("userList") !==null) {
+                userList= JSON.parse(localStorage.getItem("userList"));
+
+                for (let user of userList) {
+                  userData += `<tr><td>${user.email}</td><td>${user.name}</td><td>${user.password}</td></tr>`;
+                }
+                userTable.innerHTML = userData;
+              }
+            }
+          </script>
+        </form>
+    </Section>
+  </body>
+</html>  
